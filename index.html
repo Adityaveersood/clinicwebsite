@@ -3,1297 +3,647 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sood Clinic - Trusted Family Healthcare Since 1984 | Sector 41-D, Chandigarh</title>
-<meta name="description" content="Sood Clinic, Sector 41-D, Chandigarh - Trusted family healthcare since 1984. Dr. Anil F. Sood (G.A.M.S., M.N.I.M.A.) & Dr. Shivika Sood (B.A.M.S., Ex. Fortis Hospital). 4.9★ Google Rating. Book appointment: +91 98155 66311">
+<title>Sood Clinic — Sector 41-D, Chandigarh | Trusted Since 1984</title>
+<meta name="description" content="Sood Clinic, Sector 41-D, Chandigarh. Dr. Anil F. Sood (G.A.M.S., M.N.I.M.A.) & Dr. Shivika Sood (B.A.M.S., Ex. Fortis & Max Hospital). 4.9★ Google Rating from 143 reviews. Book: +91 98155 66311">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --primary: #1a5276;
-  --primary-light: #2e86ab;44
-  --accent: #e74c3c;
-  --accent-light: #f39c12;
-  --dark: #1a252f;
-  --light: #f8f9fa;
-  --white: #ffffff;
-  --gray: #6c757d;
-  --light-gray: #e9ecef;
-  --success: #27ae60;
-  --gold: #f1c40f;
+  --teal: #0d7377; --teal-dark: #095457; --teal-light: #14a085;
+  --coral: #e85d4e; --coral-dark: #c94a3d;
+  --dark: #1a1a2e; --dark-2: #16213e; --light: #f8fafc;
+  --white: #ffffff; --gray: #64748b; --gray-light: #e2e8f0;
+  --gold: #f59e0b; --success: #10b981;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--dark);
-  line-height: 1.6;
-  background: var(--white);
-  overflow-x: hidden;
-}
-
+body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; background: var(--white); overflow-x: hidden; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-/* Navigation */
-.navbar {
-  position: fixed; top: 0; left: 0; right: 0;
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
-  border-bottom: 1px solid var(--light-gray);
-  transition: all 0.3s ease;
-}
+/* NAVBAR */
+.navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(16px); z-index: 1000; border-bottom: 1px solid var(--gray-light); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1200px; margin: 0 auto; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; font-weight: 700; }
+.brand-text { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--dark); }
+.brand-text span { color: var(--teal); }
+.nav-menu { display: flex; gap: 32px; list-style: none; }
+.nav-menu a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; position: relative; }
+.nav-menu a:hover { color: var(--teal); }
+.nav-menu a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.3s; }
+.nav-menu a:hover::after { width: 100%; }
+.nav-cta { background: var(--coral); color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
+.nav-cta:hover { background: var(--coral-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(232,93,78,0.3); }
+.mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
 
-.nav-content {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 24px; max-width: 1200px; margin: 0 auto;
-}
+/* HERO */
+.hero { min-height: 100vh; background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 50%, #0f3460 100%); display: flex; align-items: center; padding-top: 80px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -30%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(13,115,119,0.15) 0%, transparent 70%); border-radius: 50%; }
+.hero::after { content: ''; position: absolute; bottom: -20%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(232,93,78,0.08) 0%, transparent 70%); border-radius: 50%; }
+.hero-wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 8px 18px; border-radius: 50px; color: var(--gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.15); letter-spacing: 0.5px; }
+.hero-title { font-family: 'Playfair Display', serif; font-size: 3.6rem; font-weight: 700; color: white; line-height: 1.1; margin-bottom: 20px; }
+.hero-title .highlight { background: linear-gradient(135deg, var(--teal-light), #2dd4bf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 32px; max-width: 520px; line-height: 1.7; }
+.hero-actions { display: flex; gap: 16px; margin-bottom: 40px; }
+.btn-main { background: var(--coral); color: white; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 1rem; }
+.btn-main:hover { background: var(--coral-dark); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(232,93,78,0.35); }
+.btn-ghost { background: transparent; color: white; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid rgba(255,255,255,0.25); display: inline-flex; align-items: center; gap: 8px; font-size: 1rem; }
+.btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+.hero-trust { display: flex; align-items: center; gap: 20px; }
+.trust-pills { display: flex; gap: 12px; }
+.trust-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 10px 18px; border-radius: 12px; color: white; font-size: 0.85rem; }
+.trust-pill strong { color: var(--gold); font-size: 1.1rem; display: block; }
+.trust-pill span { color: rgba(255,255,255,0.6); font-size: 0.75rem; }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem; font-weight: 700;
-  color: var(--primary);
-  display: flex; align-items: center; gap: 10px;
-}
+.hero-visual { position: relative; display: flex; justify-content: center; align-items: center; }
+.doc-frame { position: relative; width: 320px; }
+.doc-frame img { width: 100%; height: 380px; object-fit: cover; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); border: 4px solid rgba(255,255,255,0.1); }
+.doc-frame-2 { position: absolute; right: -40px; bottom: -30px; width: 240px; z-index: 2; }
+.doc-frame-2 img { height: 300px; }
+.doc-label { position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); background: white; padding: 10px 20px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); text-align: center; white-space: nowrap; }
+.doc-label h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--dark); }
+.doc-label p { font-size: 0.75rem; color: var(--teal); font-weight: 600; }
 
-.logo-icon {
-  width: 38px; height: 38px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 1.1rem; font-weight: 700;
-}
+.floating-badge { position: absolute; background: white; padding: 14px 18px; border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 10px; animation: float 3.5s ease-in-out infinite; z-index: 3; }
+.floating-badge.google { top: 20px; left: -50px; }
+.floating-badge.patients { bottom: 60px; right: -30px; animation-delay: 1.7s; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+.fb-icon { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; font-weight: 700; }
+.fb-icon.green { background: linear-gradient(135deg, var(--success), #34d399); }
+.fb-icon.gold { background: linear-gradient(135deg, var(--gold), #fbbf24); }
+.fb-text { font-size: 0.8rem; color: var(--dark); font-weight: 600; }
+.fb-text span { color: var(--gray); font-size: 0.7rem; font-weight: 400; }
 
-.nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a {
-  text-decoration: none; color: var(--dark);
-  font-weight: 500; font-size: 0.9rem;
-  transition: color 0.3s; position: relative;
-}
-.nav-links a:hover { color: var(--primary); }
-.nav-links a::after {
-  content: ''; position: absolute; bottom: -4px; left: 0;
-  width: 0; height: 2px; background: var(--primary);
-  transition: width 0.3s;
-}
-.nav-links a:hover::after { width: 100%; }
+/* STATS STRIP */
+.stats-strip { background: linear-gradient(90deg, var(--teal), var(--teal-light)); padding: 40px 0; }
+.stats-row { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 24px; }
+.stat-box { text-align: center; color: white; }
+.stat-box .num { font-size: 2.4rem; font-weight: 800; display: block; }
+.stat-box .txt { font-size: 0.85rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 1px; }
 
-.nav-cta {
-  background: var(--accent); color: white;
-  padding: 10px 22px; border-radius: 50px;
-  text-decoration: none; font-weight: 600;
-  transition: all 0.3s; border: none; cursor: pointer;
-  font-size: 0.9rem;
-}
-.nav-cta:hover { background: #c0392b; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(231,76,60,0.3); }
+/* SECTIONS */
+.section { padding: 100px 0; }
+.sec-head { text-align: center; max-width: 650px; margin: 0 auto 60px; }
+.sec-tag { display: inline-block; background: rgba(13,115,119,0.1); color: var(--teal); padding: 6px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+.sec-title { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--dark); margin-bottom: 14px; }
+.sec-desc { font-size: 1.05rem; color: var(--gray); line-height: 1.7; }
 
-.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
-
-/* Hero */
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1a5276 0%, #2e86ab 50%, #1a5276 100%);
-  display: flex; align-items: center;
-  position: relative; overflow: hidden;
-  padding-top: 80px;
-}
-
-.hero::before {
-  content: ''; position: absolute;
-  top: -50%; right: -20%; width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.hero-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 50px; align-items: center;
-  max-width: 1200px; margin: 0 auto;
-  padding: 0 24px; position: relative; z-index: 1;
-}
-
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  padding: 8px 18px; border-radius: 50px;
-  color: white; font-size: 0.8rem; font-weight: 500;
-  margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2);
-}
-
-.hero-badge .star { color: var(--gold); letter-spacing: 2px; }
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.2rem; font-weight: 700;
-  color: white; line-height: 1.15;
-  margin-bottom: 18px;
-}
-
-.hero-title span {
-  background: linear-gradient(135deg, #f1c40f, #f39c12);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-subtitle {
-  font-size: 1.05rem; color: rgba(255,255,255,0.85);
-  margin-bottom: 28px; max-width: 480px;
-  line-height: 1.7;
-}
-
-.hero-stats {
-  display: flex; gap: 32px; margin-bottom: 32px;
-}
-
-.stat-item { text-align: center; }
-.stat-number {
-  font-size: 2rem; font-weight: 800; color: white;
-  display: block;
-}
-.stat-label {
-  font-size: 0.8rem; color: rgba(255,255,255,0.7);
-  text-transform: uppercase; letter-spacing: 1px;
-}
-
-.hero-buttons { display: flex; gap: 14px; }
-
-.btn-primary {
-  background: var(--accent); color: white;
-  padding: 13px 28px; border-radius: 50px;
-  text-decoration: none; font-weight: 600;
-  transition: all 0.3s; border: none; cursor: pointer;
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.95rem;
-}
-.btn-primary:hover { background: #c0392b; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(231,76,60,0.35); }
-
-.btn-secondary {
-  background: transparent; color: white;
-  padding: 13px 28px; border-radius: 50px;
-  text-decoration: none; font-weight: 600;
-  transition: all 0.3s; border: 2px solid rgba(255,255,255,0.4);
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.95rem;
-}
-.btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: white; }
-
-.hero-images {
-  position: relative;
-  display: flex; justify-content: center;
-}
-
-.hero-doc-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
-  width: 280px;
-  transition: transform 0.4s ease;
-}
-.hero-doc-card:hover { transform: translateY(-8px); }
-
-.hero-doc-card img {
-  width: 100%; height: 320px; object-fit: cover;
-  display: block;
-}
-
-.hero-doc-info {
-  padding: 18px 20px;
-  text-align: center;
-}
-.hero-doc-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem; color: var(--dark);
-  margin-bottom: 4px;
-}
-.hero-doc-info p {
-  font-size: 0.8rem; color: var(--primary);
-  font-weight: 600;
-}
-
-.hero-doc-card-2 {
-  position: absolute;
-  right: 0; bottom: -20px;
-  width: 240px;
-  transform: rotate(3deg);
-  z-index: 2;
-}
-.hero-doc-card-2 img { height: 260px; }
-
-.floating-card {
-  position: absolute;
-  background: white;
-  padding: 14px 18px;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-  display: flex; align-items: center; gap: 10px;
-  animation: float 3s ease-in-out infinite;
-}
-
-.floating-card.reviews {
-  bottom: 40px; left: -40px;
-}
-.floating-card.rating {
-  top: 20px; right: -30px;
-  animation-delay: 1.5s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.floating-icon {
-  width: 40px; height: 40px;
-  background: linear-gradient(135deg, var(--success), #2ecc71);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 1rem; font-weight: 700;
-}
-
-.floating-text { font-size: 0.8rem; color: var(--dark); font-weight: 600; }
-.floating-text span { color: var(--gray); font-weight: 400; font-size: 0.7rem; }
-
-/* Section Styles */
-.section { padding: 90px 0; }
-.section-header {
-  text-align: center; max-width: 700px; margin: 0 auto 50px;
-}
-.section-label {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary));
-  color: white; padding: 6px 16px; border-radius: 50px;
-  font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: 1px; margin-bottom: 14px;
-}
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.4rem; font-weight: 700;
-  color: var(--dark); margin-bottom: 14px;
-}
-.section-desc {
-  font-size: 1.05rem; color: var(--gray);
-  line-height: 1.7;
-}
-
-/* About */
+/* ABOUT */
 .about { background: var(--light); }
-.about-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 50px; align-items: center;
-}
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-media { position: relative; }
+.about-img { border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.12); }
+.about-img img { width: 100%; display: block; }
+.about-badge { position: absolute; bottom: -20px; right: -10px; background: var(--teal); color: white; padding: 24px 32px; border-radius: 20px; text-align: center; box-shadow: 0 12px 30px rgba(13,115,119,0.3); }
+.about-badge .big { font-size: 2.6rem; font-weight: 800; display: block; line-height: 1; }
+.about-badge .small { font-size: 0.85rem; opacity: 0.9; }
+.about-body h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 18px; }
+.about-body p { color: var(--gray); margin-bottom: 16px; font-size: 1.05rem; line-height: 1.8; }
+.about-perks { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+.perk { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); font-size: 0.9rem; font-weight: 500; }
+.perk-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1rem; }
 
-.about-images {
-  position: relative;
-}
-.about-img-main {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-}
-.about-img-main img { width: 100%; display: block; }
+/* SERVICES */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.svc-card { background: white; padding: 32px 28px; border-radius: 20px; border: 1px solid var(--gray-light); transition: all 0.35s ease; }
+.svc-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); border-color: transparent; }
+.svc-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: white; font-size: 1.3rem; }
+.svc-card:hover .svc-icon { transform: scale(1.1) rotate(-4deg); transition: transform 0.3s; }
+.svc-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+.svc-desc { color: var(--gray); font-size: 0.9rem; line-height: 1.6; }
 
-.about-experience {
-  position: absolute;
-  bottom: -25px; right: -15px;
-  background: var(--primary);
-  color: white;
-  padding: 20px 28px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(26,82,118,0.3);
-}
-.about-experience .years { font-size: 2.2rem; font-weight: 800; display: block; }
-.about-experience .text { font-size: 0.85rem; opacity: 0.9; }
+/* DOCTORS */
+.doctors { background: linear-gradient(180deg, var(--light) 0%, white 100%); }
+.doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.doc-card { background: white; border-radius: 28px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.06); transition: all 0.4s ease; border: 1px solid var(--gray-light); }
+.doc-card:hover { transform: translateY(-10px); box-shadow: 0 24px 60px rgba(0,0,0,0.12); }
+.doc-photo { height: 360px; overflow: hidden; position: relative; }
+.doc-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.doc-card:hover .doc-photo img { transform: scale(1.05); }
+.doc-tag { position: absolute; top: 18px; right: 18px; background: var(--coral); color: white; padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
+.doc-info { padding: 30px; }
+.doc-name { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
+.doc-deg { color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 10px; }
+.doc-bio { color: var(--gray); font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px; }
+.doc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: var(--light); color: var(--dark); padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 500; }
 
-.about-content h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem; margin-bottom: 18px;
-}
-.about-content p {
-  color: var(--gray); margin-bottom: 16px;
-  font-size: 1rem; line-height: 1.8;
-}
+/* REVIEWS */
+.reviews { background: var(--dark); color: white; position: relative; overflow: hidden; }
+.reviews::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.reviews .sec-title { color: white; }
+.reviews .sec-desc { color: rgba(255,255,255,0.6); }
+.rating-block { display: flex; align-items: center; justify-content: center; gap: 50px; margin-bottom: 50px; flex-wrap: wrap; }
+.rating-score { text-align: center; }
+.rating-score .score { font-size: 5rem; font-weight: 800; line-height: 1; background: linear-gradient(135deg, var(--gold), #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.rating-score .of { font-size: 1.2rem; color: rgba(255,255,255,0.4); }
+.rating-score .lbl { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+.rating-bars { flex: 1; max-width: 400px; }
+.rb { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.rb-l { width: 36px; font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+.rb-t { flex: 1; height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
+.rb-f { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--gold), #fbbf24); }
+.rb-c { width: 40px; font-size: 0.8rem; color: rgba(255,255,255,0.4); text-align: right; }
+.review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; position: relative; z-index: 1; }
+.rev-card { background: rgba(255,255,255,0.04); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 28px; transition: all 0.3s ease; }
+.rev-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); }
+.rev-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+.rev-stars i { color: var(--gold); font-size: 0.9rem; }
+.rev-text { font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.88); margin-bottom: 18px; font-style: italic; }
+.rev-author { display: flex; align-items: center; gap: 12px; }
+.rev-av { width: 42px; height: 42px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem; }
+.rev-name { font-weight: 600; font-size: 0.9rem; }
+.rev-meta { font-size: 0.75rem; color: var(--success); display: flex; align-items: center; gap: 4px; }
+.rev-label { display: inline-block; background: rgba(255,255,255,0.08); padding: 3px 10px; border-radius: 50px; font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-top: 10px; }
 
-.about-features {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 14px; margin-top: 28px;
-}
-.about-feature {
-  display: flex; align-items: center; gap: 10px;
-  padding: 10px 14px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  font-size: 0.9rem;
-}
-.about-feature i {
-  width: 32px; height: 32px;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary));
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 0.85rem;
-}
+/* GALLERY */
+.gallery { background: var(--light); }
+.gallery-masonry { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 16px; }
+.gal-item { border-radius: 16px; overflow: hidden; position: relative; cursor: pointer; transition: all 0.4s ease; }
+.gal-item.tall { grid-row: span 2; }
+.gal-item.wide { grid-column: span 2; }
+.gal-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.gal-item:hover img { transform: scale(1.08); }
+.gal-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,115,119,0.85), transparent 60%); display: flex; align-items: flex-end; padding: 18px; opacity: 0; transition: opacity 0.3s; }
+.gal-item:hover .gal-overlay { opacity: 1; }
+.gal-cap { color: white; font-weight: 600; font-size: 0.95rem; }
+.gal-cap small { display: block; font-size: 0.75rem; opacity: 0.8; font-weight: 400; }
 
-/* Doctors Spotlight */
-.doctors-spotlight { background: linear-gradient(180deg, var(--light) 0%, white 100%); }
-.doctors-spotlight-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; }
+.contact-card { background: white; border-radius: 24px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+.c-row { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 26px; }
+.c-row:last-child { margin-bottom: 0; }
+.c-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; flex-shrink: 0; }
+.c-row h4 { font-size: 1.05rem; margin-bottom: 4px; }
+.c-row p { color: var(--gray); font-size: 0.92rem; line-height: 1.6; }
+.c-row a { color: var(--teal); text-decoration: none; font-weight: 500; }
+.c-row a:hover { text-decoration: underline; }
+.c-map { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); min-height: 100%; display: flex; flex-direction: column; }
+.map-box { flex: 1; background: linear-gradient(135deg, #e0f2f1, #b2dfdb); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; text-align: center; color: var(--teal-dark); }
+.map-box .emoji { font-size: 3rem; margin-bottom: 16px; }
+.map-box h3 { margin-bottom: 8px; font-size: 1.3rem; }
+.map-box p { color: var(--gray); max-width: 280px; margin-bottom: 20px; }
 
-.doctor-spotlight-card {
-  background: white;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-  transition: all 0.4s ease;
-  border: 1px solid var(--light-gray);
-}
-.doctor-spotlight-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-}
+/* FOOTER */
+.footer { background: var(--dark); color: white; padding: 60px 0 28px; }
+.f-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; margin-bottom: 48px; }
+.f-brand .brand-text { color: white; margin-bottom: 14px; }
+.f-brand p { color: rgba(255,255,255,0.55); font-size: 0.92rem; line-height: 1.7; }
+.f-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 18px; }
+.f-links { list-style: none; }
+.f-links li { margin-bottom: 10px; }
+.f-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+.f-links a:hover { color: white; }
+.f-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+.f-bottom p { color: rgba(255,255,255,0.35); font-size: 0.85rem; }
 
-.doctor-spotlight-img {
-  height: 350px;
-  overflow: hidden;
-  position: relative;
-}
-.doctor-spotlight-img img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.doctor-spotlight-card:hover .doctor-spotlight-img img { transform: scale(1.05); }
+/* ANIMATIONS */
+.fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
 
-.doctor-spotlight-badge {
-  position: absolute; top: 16px; right: 16px;
-  background: var(--accent); color: white;
-  padding: 6px 14px; border-radius: 50px;
-  font-size: 0.75rem; font-weight: 600;
-}
-
-.doctor-spotlight-info { padding: 28px; }
-.doctor-spotlight-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem; font-weight: 700;
-  margin-bottom: 6px;
-}
-.doctor-spotlight-qual {
-  color: var(--primary); font-weight: 600;
-  font-size: 0.9rem; margin-bottom: 10px;
-}
-.doctor-spotlight-desc {
-  color: var(--gray); font-size: 0.95rem;
-  margin-bottom: 18px; line-height: 1.7;
-}
-.doctor-spotlight-tags {
-  display: flex; flex-wrap: wrap; gap: 8px;
-}
-.doctor-spotlight-tag {
-  background: var(--light);
-  padding: 6px 14px; border-radius: 50px;
-  font-size: 0.8rem; color: var(--dark);
-  font-weight: 500;
-}
-
-/* Services */
-.services { background: linear-gradient(180deg, var(--light) 0%, white 100%); }
-.services-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-.service-card {
-  background: white;
-  padding: 32px 24px;
-  border-radius: 18px;
-  border: 1px solid var(--light-gray);
-  transition: all 0.4s ease;
-  text-align: center;
-}
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-  border-color: transparent;
-}
-
-.service-icon {
-  width: 56px; height: 56px;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary));
-  border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 16px;
-  color: white; font-size: 1.4rem;
-  transition: transform 0.3s;
-}
-.service-card:hover .service-icon { transform: scale(1.1) rotate(-5deg); }
-
-.service-title {
-  font-size: 1.1rem; font-weight: 600;
-  margin-bottom: 8px;
-}
-.service-desc {
-  color: var(--gray); font-size: 0.88rem;
-  line-height: 1.6;
-}
-
-/* Reviews */
-.reviews-section { background: var(--dark); color: white; position: relative; overflow: hidden; }
-.reviews-section::before {
-  content: ''; position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.5;
-}
-
-.reviews-section .section-title { color: white; }
-.reviews-section .section-desc { color: rgba(255,255,255,0.7); }
-
-.rating-summary {
-  display: flex; align-items: center; justify-content: center;
-  gap: 40px; margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.rating-big {
-  text-align: center;
-}
-.rating-big .number {
-  font-size: 3.5rem; font-weight: 800;
-  background: linear-gradient(135deg, var(--gold), #f39c12);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text; line-height: 1;
-}
-.rating-big .outof { font-size: 1.1rem; color: rgba(255,255,255,0.5); }
-.rating-big .label { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 4px; }
-
-.rating-bars { flex: 1; max-width: 380px; }
-.rating-bar {
-  display: flex; align-items: center; gap: 10px;
-  margin-bottom: 8px;
-}
-.rating-bar-label { width: 36px; font-size: 0.8rem; color: rgba(255,255,255,0.7); }
-.rating-bar-track {
-  flex: 1; height: 7px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 4px; overflow: hidden;
-}
-.rating-bar-fill {
-  height: 100%; border-radius: 4px;
-  background: linear-gradient(90deg, var(--gold), #f39c12);
-}
-.rating-bar-count { width: 36px; font-size: 0.8rem; color: rgba(255,255,255,0.5); text-align: right; }
-
-.reviews-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px; position: relative; z-index: 1;
-}
-
-.review-card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 18px;
-  padding: 28px;
-  transition: all 0.3s ease;
-}
-.review-card:hover {
-  background: rgba(255,255,255,0.08);
-  transform: translateY(-4px);
-}
-
-.review-stars {
-  display: flex; gap: 3px; margin-bottom: 14px;
-}
-.review-stars i { color: var(--gold); font-size: 0.9rem; }
-
-.review-text {
-  font-size: 0.95rem; line-height: 1.7;
-  color: rgba(255,255,255,0.9); margin-bottom: 18px;
-  font-style: italic;
-}
-
-.review-author {
-  display: flex; align-items: center; gap: 12px;
-}
-.review-avatar {
-  width: 42px; height: 42px;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary));
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-weight: 700; font-size: 1rem;
-}
-.review-name { font-weight: 600; font-size: 0.9rem; }
-.review-verified {
-  display: flex; align-items: center; gap: 4px;
-  font-size: 0.75rem; color: var(--success);
-}
-.review-tag {
-  display: inline-block;
-  background: rgba(255,255,255,0.1);
-  padding: 3px 10px; border-radius: 50px;
-  font-size: 0.7rem; color: rgba(255,255,255,0.6);
-  margin-top: 8px;
-}
-
-/* Gallery */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-}
-.gallery-item {
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-.gallery-item:nth-child(1) { grid-row: span 2; }
-.gallery-item:nth-child(4) { grid-row: span 2; }
-.gallery-item img {
-  width: 100%; height: 100%; object-fit: cover;
-  display: block; transition: transform 0.5s ease;
-}
-.gallery-item:hover img { transform: scale(1.1); }
-.gallery-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(26,82,118,0.8), transparent);
-  display: flex; align-items: flex-end;
-  padding: 16px;
-  opacity: 0; transition: opacity 0.3s;
-}
-.gallery-item:hover .gallery-overlay { opacity: 1; }
-.gallery-overlay-text { color: white; font-weight: 600; font-size: 0.9rem; }
-
-/* Contact */
-.contact { background: var(--light); }
-.contact-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.contact-info-card {
-  background: white;
-  border-radius: 20px;
-  padding: 36px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-.contact-item {
-  display: flex; align-items: flex-start; gap: 14px;
-  margin-bottom: 24px;
-}
-.contact-item:last-child { margin-bottom: 0; }
-.contact-icon {
-  width: 48px; height: 48px;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary));
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 1.1rem;
-  flex-shrink: 0;
-}
-.contact-item h4 { font-size: 1rem; margin-bottom: 3px; }
-.contact-item p { color: var(--gray); font-size: 0.9rem; }
-.contact-item a { color: var(--primary); text-decoration: none; font-weight: 500; }
-.contact-item a:hover { text-decoration: underline; }
-
-.contact-map {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  height: 100%;
-  min-height: 380px;
-  display: flex; align-items: center; justify-content: center;
-  position: relative;
-}
-.map-placeholder {
-  width: 100%; height: 100%;
-  background: linear-gradient(135deg, #e8f4f8, #d4e9f2);
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  color: var(--primary);
-  text-align: center; padding: 36px;
-}
-.map-placeholder i { font-size: 2.5rem; margin-bottom: 14px; }
-.map-placeholder h3 { margin-bottom: 6px; font-size: 1.2rem; }
-.map-placeholder p { color: var(--gray); max-width: 280px; font-size: 0.9rem; }
-
-/* Footer */
-.footer {
-  background: var(--dark);
-  color: white;
-  padding: 50px 0 24px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px; margin-bottom: 40px;
-}
-
-.footer-brand .logo { color: white; margin-bottom: 14px; }
-.footer-brand p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.7; }
-
-.footer-title {
-  font-size: 1rem; font-weight: 600;
-  margin-bottom: 16px; color: white;
-}
-.footer-links { list-style: none; }
-.footer-links li { margin-bottom: 10px; }
-.footer-links a {
-  color: rgba(255,255,255,0.6);
-  text-decoration: none; font-size: 0.9rem;
-  transition: color 0.3s;
-}
-.footer-links a:hover { color: white; }
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-  display: flex; justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; gap: 14px;
-}
-.footer-bottom p { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
-
-/* Scroll animations */
-.fade-in {
-  opacity: 0; transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-in.visible {
-  opacity: 1; transform: translateY(0);
-}
-
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 992px) {
-  .hero-grid { grid-template-columns: 1fr; text-align: center; }
-  .hero-title { font-size: 2.2rem; }
-  .hero-subtitle { margin: 0 auto 28px; }
-  .hero-stats { justify-content: center; }
-  .hero-buttons { justify-content: center; }
-  .hero-images { display: none; }
+  .hero-wrap { grid-template-columns: 1fr; text-align: center; }
+  .hero-title { font-size: 2.6rem; }
+  .hero-desc { margin: 0 auto 28px; }
+  .hero-actions { justify-content: center; }
+  .hero-trust { justify-content: center; }
+  .hero-visual { display: none; }
   .about-grid { grid-template-columns: 1fr; }
-  .doctors-spotlight-grid { grid-template-columns: 1fr; }
+  .doc-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-item:nth-child(1), .gallery-item:nth-child(4) { grid-row: span 1; }
+  .f-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-masonry { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+  .gal-item.tall { grid-row: span 1; }
+  .gal-item.wide { grid-column: span 1; }
+  .rating-block { flex-direction: column; gap: 24px; }
 }
-
 @media (max-width: 768px) {
-  .nav-links { display: none; }
-  .mobile-menu-btn { display: block; }
-  .hero-title { font-size: 1.8rem; }
-  .section-title { font-size: 1.8rem; }
-  .about-experience { position: static; margin-top: 16px; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .rating-summary { flex-direction: column; gap: 20px; }
-  .doctor-spotlight-img { height: 280px; }
+  .nav-menu { display: none; }
+  .mobile-toggle { display: block; }
+  .hero-title { font-size: 2rem; }
+  .sec-title { font-size: 2rem; }
+  .stats-row { gap: 16px; }
+  .stat-box .num { font-size: 1.8rem; }
+  .about-badge { position: static; margin-top: 16px; }
+  .f-grid { grid-template-columns: 1fr; }
+  .doc-photo { height: 300px; }
+  .gallery-masonry { grid-template-columns: 1fr; }
 }
-
-/* Smooth scroll */
 html { scroll-behavior: smooth; }
-
-/* Custom scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--light); }
-::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 4px; }
 </style>
+<base target="_blank">
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="nav-content">
-    <div class="logo">
-      <div class="logo-icon">+</div>
-      Sood Clinic
-    </div>
-    <ul class="nav-links">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <div class="brand-icon">+</div>
+      <div class="brand-text">Sood <span>Clinic</span></div>
+    </a>
+    <ul class="nav-menu">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#doctors">Doctors</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#doctors">Doctors</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="tel:+919815566311" class="nav-cta">📞 Call Now</a>
-    <button class="mobile-menu-btn">☰</button>
+    <a href="tel:+919815566311" class="nav-cta">📞 Book Now</a>
+    <button class="mobile-toggle">☰</button>
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-grid">
+  <div class="hero-wrap">
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="star">★★★★★</span>
-        <span>4.9/5 on Google | 126 Verified Reviews</span>
+      <div class="hero-tag">★★★★★ 4.9/5 on Google — 143 Verified Reviews</div>
+      <h1 class="hero-title">Trusted Family<br>Healthcare <span class="highlight">Since 1984</span></h1>
+      <p class="hero-desc">Sood Clinic, Sector 41-D, Chandigarh — your trusted destination for comprehensive family medicine, Ayurveda, gynaecology, and holistic healthcare. Serving generations with compassion and clinical excellence.</p>
+      <div class="hero-actions">
+        <a href="tel:+919815566311" class="btn-main">📞 Call +91 98155 66311</a>
+        <a href="#services" class="btn-ghost">Explore Services</a>
       </div>
-      <h1 class="hero-title">
-        Trusted Family Healthcare<br>Since <span>1984</span>
-      </h1>
-      <p class="hero-subtitle">
-        Sood Clinic, Sector 41-D, Chandigarh — your trusted destination for comprehensive family medicine, gynaecology, and general healthcare. Serving the community with compassion and excellence for over four decades.
-      </p>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number">40+</span>
-          <span class="stat-label">Years Experience</span>
+      <div class="hero-trust">
+        <div class="trust-pills">
+          <div class="trust-pill"><strong>40+</strong><span>Years Experience</span></div>
+          <div class="trust-pill"><strong>143</strong><span>Google Reviews</span></div>
+          <div class="trust-pill"><strong>4.9★</strong><span>Rating</span></div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">126</span>
-          <span class="stat-label">Google Reviews</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">4.9</span>
-          <span class="stat-label">Star Rating</span>
-        </div>
-      </div>
-      <div class="hero-buttons">
-        <a href="tel:+919815566311" class="btn-primary">📞 Book Appointment</a>
-        <a href="#about" class="btn-secondary">Learn More ↓</a>
       </div>
     </div>
-    <div class="hero-images">
-      <div class="hero-doc-card">
+    <div class="hero-visual">
+      <div class="doc-frame">
         <img src="1.jpg" alt="Dr. Shivika Sood">
-        <div class="hero-doc-info">
-          <h3>Dr. Shivika Sood</h3>
-          <p>B.A.M.S. (P.U.) | Gynaecologist</p>
-        </div>
+        <div class="doc-label"><h4>Dr. Shivika Sood</h4><p>B.A.M.S. (P.U.) | Gynaecologist</p></div>
       </div>
-      <div class="hero-doc-card hero-doc-card-2">
+      <div class="doc-frame doc-frame-2">
         <img src="2.jpg" alt="Dr. Anil F. Sood">
-        <div class="hero-doc-info">
-          <h3>Dr. Anil F. Sood</h3>
-          <p>G.A.M.S., M.N.I.M.A.</p>
-        </div>
+        <div class="doc-label"><h4>Dr. Anil F. Sood</h4><p>G.A.M.S., M.N.I.M.A.</p></div>
       </div>
-      <div class="floating-card reviews">
-        <div class="floating-icon">✓</div>
-        <div class="floating-text">
-          126 Reviews<br><span>Verified on Google</span>
-        </div>
-      </div>
-      <div class="floating-card rating">
-        <div class="floating-icon">★</div>
-        <div class="floating-text">
-          4.9/5 Stars<br><span>Top Rated Clinic</span>
-        </div>
-      </div>
+      <div class="floating-badge google"><div class="fb-icon gold">★</div><div class="fb-text">4.9/5 Stars<br><span>143 Google Reviews</span></div></div>
+      <div class="floating-badge patients"><div class="fb-icon green">✓</div><div class="fb-text">Verified Patients<br><span>Trusted Since 1984</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- About Section -->
+<!-- STATS STRIP -->
+<section class="stats-strip">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-box"><span class="num">40+</span><span class="txt">Years of Trust</span></div>
+      <div class="stat-box"><span class="num">143</span><span class="txt">Google Reviews</span></div>
+      <div class="stat-box"><span class="num">4.9★</span><span class="txt">Star Rating</span></div>
+      <div class="stat-box"><span class="num">15+</span><span class="txt">Medical Services</span></div>
+      <div class="stat-box"><span class="num">2</span><span class="txt">Expert Doctors</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section class="section about" id="about">
   <div class="container">
     <div class="about-grid">
-      <div class="about-images">
-        <div class="about-img-main">
-          <img src="6.jpg" alt="Sood Clinic Exterior">
-        </div>
-        <div class="about-experience">
-          <span class="years">40+</span>
-          <span class="text">Years of<br>Excellence</span>
-        </div>
+      <div class="about-media">
+        <div class="about-img"><img src="6.jpg" alt="Sood Clinic Exterior"></div>
+        <div class="about-badge"><span class="big">40+</span><span class="small">Years of<br>Excellence</span></div>
       </div>
-      <div class="about-content">
-        <span class="section-label">About Us</span>
-        <h3>Your Family's Health, Our Priority</h3>
-        <p>
-          Established in <strong>1984</strong>, Sood Clinic has been a cornerstone of healthcare in Chandigarh's Sector 41-D. Located at <strong>Vidya Path, Shop, Street Number 10, Badheri, Sector 41, Chandigarh, 160036</strong>, our clinic is easily accessible and serves as an <strong>Authorised Medical Attendant for Central Government Employees</strong>.
-        </p>
-        <p>
-          What began as a humble family practice has grown into one of the most trusted clinics in the region, serving generations of families with unwavering dedication. We combine decades of clinical experience with modern medical practices to deliver personalized care for every patient.
-        </p>
-        <div class="about-features">
-          <div class="about-feature">
-            <i>🏥</i>
-            <span>Modern Facilities</span>
-          </div>
-          <div class="about-feature">
-            <i>👨‍⚕️</i>
-            <span>Expert Doctors</span>
-          </div>
-          <div class="about-feature">
-            <i>⏰</i>
-            <span>Timely Care</span>
-          </div>
-          <div class="about-feature">
-            <i>💊</i>
-            <span>On-site Pharmacy</span>
-          </div>
+      <div class="about-body">
+        <span class="sec-tag">About Us</span>
+        <h3>Your Family's Health, Our Lifelong Commitment</h3>
+        <p>Established in <strong>1984</strong>, Sood Clinic has been a cornerstone of healthcare in Chandigarh's Sector 41-D. Located at <strong>Vidya Path, Shop Number 10, Badheri, Sector 41, Chandigarh — 160036</strong>, our clinic is easily accessible and serves as an <strong>Authorised Medical Attendant for Central Government Employees</strong>.</p>
+        <p>What began as a humble family practice has grown into one of the most trusted clinics in the region. Led by Dr. Anil F. Sood (42 years experience) and Dr. Shivika Sood (Ex. Fortis & Max Hospital), we combine decades of clinical expertise with modern Ayurvedic and allopathic treatments.</p>
+        <div class="about-perks">
+          <div class="perk"><div class="perk-icon">🏥</div><span>Modern Facilities</span></div>
+          <div class="perk"><div class="perk-icon">👨‍⚕️</div><span>Expert Doctors</span></div>
+          <div class="perk"><div class="perk-icon">⏰</div><span>Minimal Wait Time</span></div>
+          <div class="perk"><div class="perk-icon">💊</div><span>On-site Pharmacy</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Doctors Spotlight Section -->
-<section class="section doctors-spotlight" id="doctors">
+<!-- SERVICES -->
+<section class="section" id="services">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Our Doctors</span>
-      <h2 class="section-title">Meet Our Expert Physicians</h2>
-      <p class="section-desc">
-        A dedicated father-daughter team of experienced doctors committed to providing the highest standard of medical care for you and your family.
-      </p>
-    </div>
-    <div class="doctors-spotlight-grid">
-      <div class="doctor-spotlight-card">
-        <div class="doctor-spotlight-img">
-          <img src="2.jpg" alt="Dr. Anil F. Sood">
-          <span class="doctor-spotlight-badge">Senior Physician</span>
-        </div>
-        <div class="doctor-spotlight-info">
-          <h3 class="doctor-spotlight-name">Dr. Anil F. Sood</h3>
-          <p class="doctor-spotlight-qual">G.A.M.S., M.N.I.M.A. | 35+ Years Experience</p>
-          <p class="doctor-spotlight-desc">
-            A highly experienced Family Physician with over 35 years of practice. Known for his effective treatment approach, patient listening, and ethical medical practice. He ensures patients receive the right diagnosis with minimal medication.
-          </p>
-          <div class="doctor-spotlight-tags">
-            <span class="doctor-spotlight-tag">General Medicine</span>
-            <span class="doctor-spotlight-tag">Family Care</span>
-            <span class="doctor-spotlight-tag">Govt. Panel</span>
-            <span class="doctor-spotlight-tag">Central Govt. Employees</span>
-          </div>
-        </div>
-      </div>
-      <div class="doctor-spotlight-card">
-        <div class="doctor-spotlight-img">
-          <img src="1.jpg" alt="Dr. Shivika Sood">
-          <span class="doctor-spotlight-badge">Gynaecologist</span>
-        </div>
-        <div class="doctor-spotlight-info">
-          <h3 class="doctor-spotlight-name">Dr. Shivika Sood</h3>
-          <p class="doctor-spotlight-qual">B.A.M.S. (P.U.) | Ex. Fortis Hospital | Ex. Max Hospital</p>
-          <p class="doctor-spotlight-desc">
-            A compassionate Family Physician & Gynaecologist with experience from Fortis Hospital Noida and Max Hospital. Patients praise her kindness, empathy, and expertise. She makes every patient feel comfortable discussing their health concerns.
-          </p>
-          <div class="doctor-spotlight-tags">
-            <span class="doctor-spotlight-tag">Gynaecology</span>
-            <span class="doctor-spotlight-tag">Women's Health</span>
-            <span class="doctor-spotlight-tag">Ayurveda</span>
-            <span class="doctor-spotlight-tag">Family Physician</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services Section -->
-<section class="section services" id="services">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Our Services</span>
-      <h2 class="section-title">Comprehensive Healthcare Services</h2>
-      <p class="section-desc">
-        From routine check-ups to specialized treatments, we offer a wide range of medical services under one roof.
-      </p>
+    <div class="sec-head">
+      <span class="sec-tag">Our Services</span>
+      <h2 class="sec-title">Comprehensive Healthcare Under One Roof</h2>
+      <p class="sec-desc">From general OPD to specialized Ayurvedic therapies, we offer a complete spectrum of medical services for your entire family.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🏥</div>
-        <h3 class="service-title">General Medicine</h3>
-        <p class="service-desc">Complete diagnosis and treatment for common illnesses, chronic conditions, and preventive health screenings.</p>
+      <div class="svc-card"><div class="svc-icon">🏥</div><h3 class="svc-title">General OPD</h3><p class="svc-desc">Complete diagnosis and treatment for all common illnesses, chronic conditions, and preventive health screenings.</p></div>
+      <div class="svc-card"><div class="svc-icon">🌿</div><h3 class="svc-title">Ayurveda Consultation</h3><p class="svc-desc">Personalized Ayurvedic consultations using traditional wisdom combined with modern diagnostic approaches.</p></div>
+      <div class="svc-card"><div class="svc-icon">💆</div><h3 class="svc-title">Panchakarma Therapies</h3><p class="svc-desc">Authentic Panchakarma detoxification and rejuvenation therapies for holistic healing and wellness.</p></div>
+      <div class="svc-card"><div class="svc-icon">🥗</div><h3 class="svc-title">Diet & Lifestyle Counselling</h3><p class="svc-desc">Expert-guided nutrition plans and lifestyle modifications for sustainable health improvements.</p></div>
+      <div class="svc-card"><div class="svc-icon">⚖️</div><h3 class="svc-title">Weight Management</h3><p class="svc-desc">Scientific weight management programs combining diet, exercise, and medical supervision.</p></div>
+      <div class="svc-card"><div class="svc-icon">🧘</div><h3 class="svc-title">Stress & Anxiety Management</h3><p class="svc-desc">Holistic stress relief therapies including counselling, meditation guidance, and natural treatments.</p></div>
+      <div class="svc-card"><div class="svc-icon">🦴</div><h3 class="svc-title">Joint Pain & Arthritis Treatment</h3><p class="svc-desc">Effective management of joint pain, arthritis, and musculoskeletal disorders through integrated medicine.</p></div>
+      <div class="svc-card"><div class="svc-icon">🩹</div><h3 class="svc-title">Back Pain / Sciatica Management</h3><p class="svc-desc">Specialized treatment for chronic back pain, sciatica, and spinal disorders with lasting relief.</p></div>
+      <div class="svc-card"><div class="svc-icon">🧠</div><h3 class="svc-title">Migraine Treatment</h3><p class="svc-desc">Targeted migraine and headache management through root-cause diagnosis and personalized care.</p></div>
+      <div class="svc-card"><div class="svc-icon">🍎</div><h3 class="svc-title">Digestive Disorders</h3><p class="svc-desc">Comprehensive treatment for acidity, IBS, constipation, and other gastrointestinal conditions.</p></div>
+      <div class="svc-card"><div class="svc-icon">💉</div><h3 class="svc-title">Diabetes & Hypertension Support</h3><p class="svc-desc">Long-term management and monitoring of diabetes, blood pressure, and lifestyle diseases.</p></div>
+      <div class="svc-card"><div class="svc-icon">✨</div><h3 class="svc-title">Skin & Hair Care</h3><p class="svc-desc">Ayurvedic and modern treatments for skin conditions, hair fall, and cosmetic dermatology concerns.</p></div>
+      <div class="svc-card"><div class="svc-icon">👩‍⚕️</div><h3 class="svc-title">Women's Health</h3><p class="svc-desc">Complete gynaecological care including prenatal care, menstrual disorders, and reproductive health.</p></div>
+      <div class="svc-card"><div class="svc-icon">👶</div><h3 class="svc-title">Child Health</h3><p class="svc-desc">Pediatric care for infants and children including vaccinations, growth monitoring, and illness treatment.</p></div>
+      <div class="svc-card"><div class="svc-icon">🛡️</div><h3 class="svc-title">Seasonal Immunization Programs</h3><p class="svc-desc">Flu shots, travel vaccines, and routine immunizations for all age groups at affordable prices.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="section doctors" id="doctors">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">Our Doctors</span>
+      <h2 class="sec-title">Meet the Physicians Behind Your Care</h2>
+      <p class="sec-desc">A dedicated father-daughter team bringing decades of combined experience, compassion, and clinical excellence to every patient.</p>
+    </div>
+    <div class="doc-grid">
+      <div class="doc-card">
+        <div class="doc-photo">
+          <img src="2.jpg" alt="Dr. Anil F. Sood">
+          <span class="doc-tag">Senior Physician</span>
+        </div>
+        <div class="doc-info">
+          <h3 class="doc-name">Dr. Anil F. Sood</h3>
+          <p class="doc-deg">G.A.M.S., M.N.I.M.A. | 42 Years Experience</p>
+          <p class="doc-bio">A highly experienced Family Physician known for precise diagnosis, ethical practice, and effective treatment with minimal medication. Patients trust him for his calm demeanor and long-term health solutions.</p>
+          <div class="doc-chips">
+            <span class="chip">General Medicine</span>
+            <span class="chip">Family Care</span>
+            <span class="chip">Govt. Panel</span>
+            <span class="chip">Central Govt. Employees</span>
+          </div>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon">👩‍⚕️</div>
-        <h3 class="service-title">Gynaecology</h3>
-        <p class="service-desc">Comprehensive women's health services including prenatal care, menstrual disorders, and reproductive health.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">👶</div>
-        <h3 class="service-title">Pediatric Care</h3>
-        <p class="service-desc">Gentle and specialized medical care for infants, children, and adolescents, including vaccinations.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🩺</div>
-        <h3 class="service-title">Health Checkups</h3>
-        <p class="service-desc">Full body health checkups, blood tests, and preventive screenings for early detection of diseases.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">💉</div>
-        <h3 class="service-title">Vaccinations</h3>
-        <p class="service-desc">Immunization services for all age groups including flu shots, travel vaccines, and routine vaccinations.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🌿</div>
-        <h3 class="service-title">Ayurvedic Treatment</h3>
-        <p class="service-desc">Holistic Ayurvedic treatments and therapies combining traditional wisdom with modern healthcare.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">💊</div>
-        <h3 class="service-title">On-site Pharmacy</h3>
-        <p class="service-desc">Convenient in-clinic pharmacy with genuine medicines and healthcare products at competitive prices.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📋</div>
-        <h3 class="service-title">Medical Certificates</h3>
-        <p class="service-desc">Authorised medical certificates for Central Government employees and other official requirements.</p>
+      <div class="doc-card">
+        <div class="doc-photo">
+          <img src="1.jpg" alt="Dr. Shivika Sood">
+          <span class="doc-tag">Gynaecologist</span>
+        </div>
+        <div class="doc-info">
+          <h3 class="doc-name">Dr. Shivika Sood</h3>
+          <p class="doc-deg">B.A.M.S. (P.U.) | Ex. Fortis Hospital | Ex. Max Hospital</p>
+          <p class="doc-bio">A compassionate Family Physician & Gynaecologist with premier hospital experience. Patients praise her kindness, empathy, and expertise. She ensures every patient feels comfortable discussing their health concerns.</p>
+          <div class="doc-chips">
+            <span class="chip">Gynaecology</span>
+            <span class="chip">Women's Health</span>
+            <span class="chip">Ayurveda</span>
+            <span class="chip">Family Physician</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Reviews Section -->
-<section class="section reviews-section" id="reviews">
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label" style="background: var(--accent);">Patient Reviews</span>
-      <h2 class="section-title">What Our Patients Say</h2>
-      <p class="section-desc">
-        Authentic reviews from Google — hear from real patients who trust us with their family's health.
-      </p>
+    <div class="sec-head">
+      <span class="sec-tag" style="background: rgba(255,255,255,0.1); color: white;">Patient Reviews</span>
+      <h2 class="sec-title">What 143+ Patients Say on Google</h2>
+      <p class="sec-desc">Authentic, unfiltered reviews from real patients who trust Sood Clinic with their family's health.</p>
     </div>
 
-    <div class="rating-summary">
-      <div class="rating-big">
-        <div class="number">4.9</div>
-        <div class="outof">out of 5</div>
-        <div class="label">Based on 126 Google Reviews</div>
+    <div class="rating-block">
+      <div class="rating-score">
+        <div class="score">4.9</div>
+        <div class="of">out of 5</div>
+        <div class="lbl">Based on 143 Google Reviews</div>
       </div>
       <div class="rating-bars">
-        <div class="rating-bar">
-          <span class="rating-bar-label">5★</span>
-          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 95%"></div></div>
-          <span class="rating-bar-count">~120</span>
-        </div>
-        <div class="rating-bar">
-          <span class="rating-bar-label">4★</span>
-          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 3%"></div></div>
-          <span class="rating-bar-count">~4</span>
-        </div>
-        <div class="rating-bar">
-          <span class="rating-bar-label">3★</span>
-          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 2%"></div></div>
-          <span class="rating-bar-count">~2</span>
-        </div>
-        <div class="rating-bar">
-          <span class="rating-bar-label">2★</span>
-          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 0%"></div></div>
-          <span class="rating-bar-count">0</span>
-        </div>
-        <div class="rating-bar">
-          <span class="rating-bar-label">1★</span>
-          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 0%"></div></div>
-          <span class="rating-bar-count">0</span>
-        </div>
+        <div class="rb"><span class="rb-l">5★</span><div class="rb-t"><div class="rb-f" style="width: 96%"></div></div><span class="rb-c">~137</span></div>
+        <div class="rb"><span class="rb-l">4★</span><div class="rb-t"><div class="rb-f" style="width: 2%"></div></div><span class="rb-c">~4</span></div>
+        <div class="rb"><span class="rb-l">3★</span><div class="rb-t"><div class="rb-f" style="width: 2%"></div></div><span class="rb-c">~2</span></div>
+        <div class="rb"><span class="rb-l">2★</span><div class="rb-t"><div class="rb-f" style="width: 0%"></div></div><span class="rb-c">0</span></div>
+        <div class="rb"><span class="rb-l">1★</span><div class="rb-t"><div class="rb-f" style="width: 0%"></div></div><span class="rb-c">0</span></div>
       </div>
     </div>
 
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"They're the best! Dr. Anil Sood is really effective and the best part is they ask you to ingest one dose before you leave their clinic so you're more than half cured by the time you reach your place."</p>
-        <div class="review-author">
-          <div class="review-avatar">SS</div>
-          <div>
-            <div class="review-name">Shivmeet Singh</div>
-            <div class="review-verified">✓ Local Guide · 45 reviews</div>
-          </div>
-        </div>
-        <span class="review-tag">effective medicine</span>
+    <div class="review-grid">
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Dr. Anil sood is an excellent doctor—professional, caring, and approachable. His diagnosis and treatment were precise, and he explained everything with great clarity. I truly appreciate his dedication and compassionate approach. Highly recommended!"</p>
+        <div class="rev-author"><div class="rev-av">PG</div><div><div class="rev-name">Pankaj Guleria</div><div class="rev-meta">✓ Verified · 5 reviews · 2 photos</div></div></div>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"I've never felt more comfortable discussing my health concerns with a doctor. Her kindness, empathy, and expertise make her an extraordinary doctor."</p>
-        <div class="review-author">
-          <div class="review-avatar">JI</div>
-          <div>
-            <div class="review-name">Junaid Iqbal</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">attentive staff</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"They're the best! Dr. Anil sood is really effective. Went to dr shivika sood last visit before travel. I was sick as a dog, 4 doses, moment I deboarded my plane I felt like a million bucks! God bless the entire Sood family."</p>
+        <div class="rev-author"><div class="rev-av">SS</div><div><div class="rev-name">Shivmeet Singh</div><div class="rev-meta">✓ Local Guide · 46 reviews · 29 photos</div></div></div>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Visited the doctors and got exact diagnosis of the illness with right treatment. Very professional and knowledgeable doctors. Thoroughly satisfied and had a great experience with personal connect."</p>
-        <div class="review-author">
-          <div class="review-avatar">AK</div>
-          <div>
-            <div class="review-name">Ankit Kajal</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">exact diagnosis</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"I've never felt more comfortable discussing my health concerns with a doctor. Her kindness, empathy, and expertise make her an extraordinary doctor."</p>
+        <div class="rev-author"><div class="rev-av">JI</div><div><div class="rev-name">Junaid Iqbal</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">attentive staff</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"The doctor understood my problem very well. He gave me complete information and answered all my questions. Very satisfied with the treatment."</p>
-        <div class="review-author">
-          <div class="review-avatar">BS</div>
-          <div>
-            <div class="review-name">Balbir Singh</div>
-            <div class="review-verified">✓ Verified Patient · 5 photos</div>
-          </div>
-        </div>
-        <span class="review-tag">condition</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Visited the doctors and got exact diagnosis of the illness with right treatment. Very professional and knowledgeable doctors. Thoroughly satisfied and had a great experience with personal connect."</p>
+        <div class="rev-author"><div class="rev-av">AK</div><div><div class="rev-name">Ankit Kajal</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">exact diagnosis</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Excellent clinic! Friendly staff, minimal wait, and attentive. Clean and well-organized — highly recommend!"</p>
-        <div class="review-author">
-          <div class="review-avatar">MA</div>
-          <div>
-            <div class="review-name">Manu Anmol Singh</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">attentive staff</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"The doctor understood my problem very well. He gave me complete information and answered all my questions. Very satisfied with the treatment."</p>
+        <div class="rev-author"><div class="rev-av">BS</div><div><div class="rev-name">Balbir Singh</div><div class="rev-meta">✓ Verified · 5 photos</div></div></div>
+        <span class="rev-label">condition</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Well experience both doctors understand the patient conditions. I will definitely recommend."</p>
-        <div class="review-author">
-          <div class="review-avatar">MK</div>
-          <div>
-            <div class="review-name">Mithlesh Kumar</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">condition</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Excellent clinic! Friendly staff, minimal wait, and attentive. Clean and well-organized — highly recommend!"</p>
+        <div class="rev-author"><div class="rev-av">MA</div><div><div class="rev-name">Manu Anmol Singh</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">attentive staff</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Both doctors are well experienced and they give good treatment after understanding the patient condition."</p>
-        <div class="review-author">
-          <div class="review-avatar">AB</div>
-          <div>
-            <div class="review-name">Ashish Bhagat</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">condition</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Well experience both doctors understand the patient conditions. I will definitely recommend."</p>
+        <div class="rev-author"><div class="rev-av">MK</div><div><div class="rev-name">Mithlesh Kumar</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">condition</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Cheap price effective treatment. Good for poor and medium class."</p>
-        <div class="review-author">
-          <div class="review-avatar">DK</div>
-          <div>
-            <div class="review-name">Dinesh Kumar</div>
-            <div class="review-verified">✓ Verified Patient · 7 photos</div>
-          </div>
-        </div>
-        <span class="review-tag">effective medicine</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Both doctors are well experienced and they give good treatment after understanding the patient condition."</p>
+        <div class="rev-author"><div class="rev-av">AB</div><div><div class="rev-name">Ashish Bhagat</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">condition</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Had a great experience at this clinic. The doctor was friendly and professional, and the doctor took the time to listen to my concerns. Would highly recommend their services."</p>
-        <div class="review-author">
-          <div class="review-avatar">VP</div>
-          <div>
-            <div class="review-name">Vishnu P</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">attentive staff</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Cheap price effective treatment. Good for poor and medium class."</p>
+        <div class="rev-author"><div class="rev-av">DK</div><div><div class="rev-name">Dinesh Kumar</div><div class="rev-meta">✓ Verified · 7 photos</div></div></div>
+        <span class="rev-label">effective medicine</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Nice doc. Attended me nicely and gave effective medicine."</p>
-        <div class="review-author">
-          <div class="review-avatar">NK</div>
-          <div>
-            <div class="review-name">Nikhil Kumar</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">effective medicine</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Had a great experience at this clinic. The doctor was friendly and professional, and took the time to listen to my concerns. Would highly recommend their services."</p>
+        <div class="rev-author"><div class="rev-av">VP</div><div><div class="rev-name">Vishnu P</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">attentive staff</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Nice behaviour Dr. Anil Sood and Shivika Sood ma'am."</p>
-        <div class="review-author">
-          <div class="review-avatar">RK</div>
-          <div>
-            <div class="review-name">Rimpy Kaur</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">attentive staff</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Nice doc. Attended me nicely and gave effective medicine."</p>
+        <div class="rev-author"><div class="rev-av">NK</div><div><div class="rev-name">Nikhil Kumar</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">effective medicine</span>
       </div>
 
-      <div class="review-card">
-        <div class="review-stars">
-          <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-        </div>
-        <p class="review-text">"Well experienced doctors treating patients very well."</p>
-        <div class="review-author">
-          <div class="review-avatar">MC</div>
-          <div>
-            <div class="review-name">Manik Chawla</div>
-            <div class="review-verified">✓ Verified Patient</div>
-          </div>
-        </div>
-        <span class="review-tag">condition</span>
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Nice behaviour Dr. Anil Sood and Shivika Sood ma'am."</p>
+        <div class="rev-author"><div class="rev-av">RK</div><div><div class="rev-name">Rimpy Kaur</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">attentive staff</span>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Well experienced doctors treating patients very well."</p>
+        <div class="rev-author"><div class="rev-av">MC</div><div><div class="rev-name">Manik Chawla</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+        <span class="rev-label">condition</span>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Much recommended place. Medication worked as wonders."</p>
+        <div class="rev-author"><div class="rev-av">RR</div><div><div class="rev-name">Richa Rana</div><div class="rev-meta">✓ Verified · 2 photos</div></div></div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"Always a treat to meet Sood Ji! One of the trustworthy doctors in Chandigarh."</p>
+        <div class="rev-author"><div class="rev-av">AS</div><div><div class="rev-name">Anish Sethi</div><div class="rev-meta">✓ Verified Patient</div></div></div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+        <p class="rev-text">"One of the best clinic and doctors in south chandigarh. Very affordable too."</p>
+        <div class="rev-author"><div class="rev-av">KS</div><div><div class="rev-name">Dr. K. Singh</div><div class="rev-meta">✓ Verified Patient</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Gallery Section -->
-<section class="section" id="gallery">
+<!-- GALLERY -->
+<section class="section gallery" id="gallery">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Gallery</span>
-      <h2 class="section-title">Our Clinic & Facilities</h2>
-      <p class="section-desc">
-        Take a look at our clinic premises, modern facilities, and the caring environment we provide for our patients.
-      </p>
+    <div class="sec-head">
+      <span class="sec-tag">Gallery</span>
+      <h2 class="sec-title">Our Clinic & Facilities</h2>
+      <p class="sec-desc">A glimpse into our clinic premises, caring environment, and the team behind your healthcare.</p>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="6.jpg" alt="Sood Clinic Exterior">
-        <div class="gallery-overlay">
-          <span class="gallery-overlay-text">Clinic Exterior</span>
-        </div>
+    <div class="gallery-masonry">
+      <div class="gal-item tall">
+        <img src="6.jpg" alt="Diabetes Camp">
+        <div class="gal-overlay"><span class="gal-cap">Diabetes Camp<small>Sood Clinic, Sector 41-D</small></span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gal-item">
         <img src="3.jpg" alt="Clinic Entrance">
-        <div class="gallery-overlay">
-          <span class="gallery-overlay-text">Clinic Entrance</span>
-        </div>
+        <div class="gal-overlay"><span class="gal-cap">Clinic Entrance</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gal-item">
         <img src="4.jpg" alt="Patient Consultation">
-        <div class="gallery-overlay">
-          <span class="gallery-overlay-text">Patient Consultation</span>
-        </div>
+        <div class="gal-overlay"><span class="gal-cap">Patient Consultation</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gal-item tall">
         <img src="1.jpg" alt="Dr. Shivika Sood">
-        <div class="gallery-overlay">
-          <span class="gallery-overlay-text">Dr. Shivika Sood</span>
-        </div>
+        <div class="gal-overlay"><span class="gal-cap">Dr. Shivika Sood<small>Gynaecologist & Family Physician</small></span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gal-item wide">
         <img src="2.jpg" alt="Dr. Anil F. Sood">
-        <div class="gallery-overlay">
-          <span class="gallery-overlay-text">Dr. Anil F. Sood</span>
-        </div>
+        <div class="gal-overlay"><span class="gal-cap">Dr. Anil F. Sood<small>Senior Physician · 42 Years Experience</small></span></div>
       </div>
-      <div class="gallery-item">
-        <img src="5.jpg" alt="Community Health Awareness">
-        <div class="gallery-overlay">
-          <span class="gallery-overlay-text">Health Awareness Program</span>
-        </div>
+      <div class="gal-item">
+        <img src="5.jpg" alt="Health Awareness Program">
+        <div class="gal-overlay"><span class="gal-cap">Health Awareness</span></div>
       </div>
+     </div>
     </div>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="section contact" id="contact">
+<!-- CONTACT -->
+<section class="section" id="contact">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Contact Us</span>
-      <h2 class="section-title">Visit Us Today</h2>
-      <p class="section-desc">
-        We're here to help. Reach out to us for appointments, inquiries, or any health-related questions.
-      </p>
+    <div class="sec-head">
+      <span class="sec-tag">Contact Us</span>
+      <h2 class="sec-title">Visit Us Today</h2>
+      <p class="sec-desc">We're here to help. Reach out for appointments, inquiries, or any health-related questions.</p>
     </div>
     <div class="contact-grid">
-      <div class="contact-info-card">
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
+      <div class="contact-card">
+        <div class="c-row">
+          <div class="c-icon">📍</div>
           <div>
             <h4>Address</h4>
-            <p>Vidya Path, Shop, Street Number 10<br>Badheri, Sector 41, Chandigarh<br>160036, India</p>
+            <p>Vidya Path, Shop Number 10<br>Badheri, Sector 41, Chandigarh<br>160036, India</p>
           </div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">📞</div>
+        <div class="c-row">
+          <div class="c-icon">📞</div>
           <div>
             <h4>Phone</h4>
             <p><a href="tel:+919815566311">+91 98155 66311</a></p>
           </div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">🕐</div>
+        <div class="c-row">
+          <div class="c-icon">🕐</div>
           <div>
             <h4>Timings</h4>
-            <p>Mon - Sat: 9:00 AM - 2:00 PM<br>Evening: 5:00 PM - 8:00 PM<br>Sunday: Closed</p>
+            <p><strong>Mon – Sat:</strong> 9:00 AM – 1:30 PM<br><strong>Evening:</strong> 5:00 PM – 9:30 PM<br><strong>Sunday:</strong> 9:00 AM – 2:00 PM</p>
           </div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">✅</div>
+        <div class="c-row">
+          <div class="c-icon">✅</div>
           <div>
             <h4>Authorised For</h4>
             <p>Central Government Employees<br>Medical Attendant Services</p>
           </div>
         </div>
       </div>
-      <div class="contact-map">
-        <div class="map-placeholder">
-          <div style="font-size: 2.5rem; margin-bottom: 14px;">🗺️</div>
+      <div class="c-map">
+        <div class="map-box">
+          <div class="emoji">🗺️</div>
           <h3>Sood Clinic Location</h3>
           <p>Sector 41-D, Vidya Path, Badheri, Chandigarh, 160036</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Sood+Clinic+Sector+41+Chandigarh" target="_blank" class="btn-primary" style="margin-top: 16px;">
-            Open in Google Maps →
-          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Sood+Clinic+Sector+41+Chandigarh" target="_blank" class="btn-main" style="margin-top: 0;">Open in Google Maps →</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">
-          <div class="logo-icon">+</div>
-          Sood Clinic
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="brand" style="margin-bottom: 14px;">
+          <div class="brand-icon">+</div>
+          <div class="brand-text" style="color: white;">Sood <span style="color: var(--teal-light);">Clinic</span></div>
         </div>
         <p>Trusted family healthcare since 1984. Serving the Chandigarh community with compassion, expertise, and dedication for over four decades.</p>
       </div>
       <div>
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-links">
+        <h4 class="f-title">Quick Links</h4>
+        <ul class="f-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#doctors">Our Doctors</a></li>
@@ -1301,64 +651,47 @@ html { scroll-behavior: smooth; }
         </ul>
       </div>
       <div>
-        <h4 class="footer-title">Services</h4>
-        <ul class="footer-links">
-          <li><a href="#services">General Medicine</a></li>
+        <h4 class="f-title">Services</h4>
+        <ul class="f-links">
+          <li><a href="#services">General OPD</a></li>
+          <li><a href="#services">Ayurveda</a></li>
           <li><a href="#services">Gynaecology</a></li>
-          <li><a href="#services">Pediatric Care</a></li>
-          <li><a href="#services">Health Checkups</a></li>
+          <li><a href="#services">Panchakarma</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="footer-title">Contact</h4>
-        <ul class="footer-links">
+        <h4 class="f-title">Contact</h4>
+        <ul class="f-links">
           <li>📍 Sector 41-D, Chandigarh</li>
           <li>📞 <a href="tel:+919815566311">+91 98155 66311</a></li>
-          <li>⏰ Mon-Sat: 9AM-2PM, 5PM-8PM</li>
+          <li>⏰ Mon-Sat: 9AM-1:30PM, 5PM-9:30PM</li>
+          <li>⏰ Sun: 9AM-2PM</li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="f-bottom">
       <p>© 2024 Sood Clinic. All rights reserved.</p>
-      <p>4.9★ on Google · 126 Reviews · Trusted since 1984</p>
+      <p>4.9★ on Google · 143 Reviews · Trusted since 1984</p>
     </div>
   </div>
 </footer>
 
 <script>
-// Scroll animations
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll('.section-header, .doctor-spotlight-card, .service-card, .review-card, .gallery-item, .contact-item').forEach(el => {
-  el.classList.add('fade-in');
-  observer.observe(el);
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.sec-head, .doc-card, .svc-card, .rev-card, .gal-item, .c-row').forEach(el => {
+  el.classList.add('fade-up'); observer.observe(el);
 });
-
-// Navbar scroll effect
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) {
-    navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-  } else {
-    navbar.style.boxShadow = 'none';
-  }
+  navbar.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.1)' : 'none';
 });
-
-// Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 </script>
